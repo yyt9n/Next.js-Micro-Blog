@@ -10,7 +10,6 @@ import { getPostsData } from '../lib/post'
 // SSGの場合
 export async function getStaticProps() {
   const allPostsData = getPostsData(); // id, title, date, thumbnail
-  console.log(allPostsData);
 
   return {
     props: {
@@ -18,6 +17,17 @@ export async function getStaticProps() {
     },
   };
 }
+
+// SSRの場合 - 今回は使用していない
+/*
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      // コンポーネントに渡すためのprops
+    },
+  };
+}
+*/
 
 export default function Home({ allPostsData }) {
   return (
