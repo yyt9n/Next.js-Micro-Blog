@@ -35,7 +35,7 @@ export default function Home() {
         </article>
         <article>
           <Link href="/">
-            <img src="/images/thumbnail1.jpg" alt="" className={styles.thumbnailImage} />
+            <img src="/images/thumbnail2.jpg" alt="" className={styles.thumbnailImage} />
           </Link>
           <Link href="/">
             <a className={utilStyles.boldText}>タイトル1</a>
@@ -47,7 +47,7 @@ export default function Home() {
         </article>
         <article>
           <Link href="/">
-            <img src="/images/thumbnail1.jpg" alt="" className={styles.thumbnailImage} />
+            <img src="/images/thumbnail3.jpg" alt="" className={styles.thumbnailImage} />
           </Link>
           <Link href="/">
             <a className={utilStyles.boldText}>タイトル1</a>
@@ -59,7 +59,7 @@ export default function Home() {
         </article>
         <article>
           <Link href="/">
-            <img src="/images/thumbnail1.jpg" alt="" className={styles.thumbnailImage} />
+            <img src="/images/thumbnail4.jpg" alt="" className={styles.thumbnailImage} />
           </Link>
           <Link href="/">
             <a className={utilStyles.boldText}>タイトル1</a>
