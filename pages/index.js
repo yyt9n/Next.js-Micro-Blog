@@ -40,26 +40,24 @@ export default function Home({ allPostsData }) {
           私はエンジニアです。/ Next.jsでマイクロブログを作成してみたよ。
         </p>
       </section>
-      <section>
-        <h2>📃エンジニアのブログ</h2>
-        <div>
-          <article></article>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>📃エンジニアのブログ</h2>
+
+        <div className={styles.grid}>
+          { allPostsData.map(({id, title, date, thumbnail}) => (
+            <article key={id}>
+              <Link href={`/posts/${id}`}>
+                <img src={`${thumbnail}`} alt="" className={styles.thumbnailImage} />
+              </Link>
+              <Link href={`/posts/${id}`}>
+                <a className={utilStyles.boldText}>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>{date}</small>
+            </article>
+          )) }
         </div>
       </section>
-      <div className={styles.grid}>
-        { allPostsData.map(({id, title, date, thumbnail}) => (
-          <article key={id}>
-            <Link href={`/posts/${id}`}>
-              <img src={`${thumbnail}`} alt="" className={styles.thumbnailImage} />
-            </Link>
-            <Link href={`/posts/${id}`}>
-              <a className={utilStyles.boldText}>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>{date}</small>
-          </article>
-        )) }
-      </div>
     </Layout>
   )
 }
